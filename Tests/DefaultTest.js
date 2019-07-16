@@ -8,7 +8,7 @@ describe('DefaultTest', () => {
 
     it('should go to nehalist.io and check the title', async () => {
         await driver.get('https://www.google.com');
-        await driver.sleep(20001);
+        await driver.sleep(20000);
         await driver.findElement(By.name('q')).sendKeys('nehalist', Key.ENTER);
         await driver.wait(until.elementLocated(By.id('search')));
         await driver.findElement(By.linkText('nehalist.io')).click();
